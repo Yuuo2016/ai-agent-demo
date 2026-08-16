@@ -1,0 +1,23 @@
+# 环境配置（含真实密钥，禁止提交）
+.env
+.env.local
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 输出产物（本地生成报告/文档）
+output/
+*.docx
+*.txt
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面试演示脚本 - AI Agent 实战题</title>
+<style>
+:root{--primary:#2b6cb0;--primary-dark:#1a365d;--accent:#2f855a;--warn-bg:#fffff0;--warn-border:#d69e2e;--bg:#f7fafc;--card:#fff;--text:#2d3748;--muted:#718096;--border:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{max-width:860px;margin:0 auto;padding:40px 24px 80px}
+header{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:#fff;padding:48px 24px;text-align:center}
+header h1{font-size:28px;margin-bottom:8px}
+header p{opacity:.9;font-size:15px}
+.repo-link{display:inline-block;margin-top:16px;padding:8px 20px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);border-radius:20px;color:#fff;text-decoration:none;font-size:14px}
+h2{font-size:22px;color:var(--primary-dark);margin:48px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--primary)}
+h3{font-size:17px;color:var(--primary);margin:28px 0 10px}
+p{margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:16px}
+.timeline{border-left:3px solid var(--primary);padding-left:20px;margin:16px 0}
+.timeline .step{position:relative;margin-bottom:20px}
+.timeline .step::before{content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--primary)}
+.step-label{display:inline-block;font-size:12px;font-weight:600;color:#fff;background:var(--primary);padding:2px 10px;border-radius:12px;margin-bottom:4px}
+.step-label.green{background:var(--accent)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th,td{border:1px solid var(--border);padding:10px 12px;text-align:left}
+th{background:#edf2f7;font-weight:600}
+.warn{background:var(--warn-bg);border-left:4px solid var(--warn-border);padding:12px 16px;border-radius:0 6px 6px 0;margin:12px 0;font-size:14px}
+code{background:#edf2f7;padding:2px 6px;border-radius:4px;font-family:"SF Mono",Consolas,monospace;font-size:13px}
+pre{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6;margin:12px 0}
+pre code{background:none;color:inherit;padding:0}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:4px;margin-right:6px}
+.tag-p0{background:#fed7d7;color:#9b2c2c}
+.tag-ai{background:#c6f6d5;color:#22543d}
+.tag-risk{background:#fefcbf;color:#744210}
+.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<header>
+<h1>面试演示脚本</h1>
+<p>AI Agent 实战题 · 热点发现 Agent + 内容运营 Agent · 线上会议 Demo</p>
+<a class="repo-link" href="https://github.com/Yuuo2016/ai-agent-demo" target="_blank">github.com/Yuuo2016/ai-agent-demo</a>
+</header>
+<div class="container">
+<div class="card">
+<p><strong>选题</strong>：题三 热点发现 Agent + 题二 内容运营 Agent，均通过飞书推送形成真实闭环。</p>
+<p><strong>核心策略</strong>：两题都落在"AI 产品出海增长"这条主线上，与应聘的增长运营岗位强相关；飞书推送门槛低、可复用，保证"能运行、能演示"。</p>
+</div>
+<h2>开场（30 秒）</h2>
+<div class="card"><p>我选了两道题，都围绕"AI 产品出海增长"这条主线，用飞书做真实闭环。先演示热点发现。</p></div>
+<h2>题三：热点发现 Agent（约 2 分钟）</h2>
+<div class="timeline">
+<div class="step"><span class="step-label">1/4</span><p><strong>实时抓取多源</strong>：运行脚本，展示 RSS（36氪/机器之心/HN/Reddit）+ GitHub Trending 实时抓取。</p></div>
+<div class="step"><span class="step-label green">2/4</span><p><strong>AI 筛选与摘要</strong>：强调 AI 做的是"筛选 + 摘要 + 价值评分 + 入选理由"，不是简单问答，对应评审"AI 使用"维度。</p></div>
+<div class="step"><span class="step-label green">3/4</span><p><strong>人工审核</strong>：停在审核节点，<strong>现场点"通过"</strong>，展示飞书群收到报告，对应"执行能力"+"风险控制"。</p></div>
+<div class="step"><span class="step-label">4/4</span><p><strong>飞书推送 + 本地保存</strong>：展示推送结果和保存在 output/ 的报告文件。</p></div>
+</div>
+<div class="warn"><strong>演示要点</strong>：抓取是实时的，网络差时部分源可能失败，代码已做容错。GitHub Trending 源最稳定，优先保证它抓到数据。</div>
+<h2>题二：内容运营 Agent（约 2 分钟）</h2>
+<div class="timeline">
+<div class="step"><span class="step-label green">1/4</span><p><strong>AI 生成热门选题</strong>：展示 AI 围绕"AI 产品出海增长"产出选题列表（标题/人群/角度/平台）。</p></div>
+<div class="step"><span class="step-label green">2/4</span><p><strong>AI 生成平台化内容</strong>：选一个选题，生成公众号风格完整内容。</p></div>
+<div class="step"><span class="step-label green">3/4</span><p><strong>人工审核</strong>：现场通过，对应"风险控制"。</p></div>
+<div class="step"><span class="step-label">4/4</span><p><strong>飞书推送 + Word 文档</strong>：展示双输出，体现"收集 + 生成"双任务和"飞书 + 文档"双渠道。</p></div>
+</div>
+<h2>收尾（30 秒）</h2>
+<div class="card"><p>诚实说明局限：AI 内容需人工把关质量、数据源依赖网络、飞书 webhook 有频率限制。对应"风险控制"维度。</p></div>
+<h2>评审五维度话术</h2>
+<table><thead><tr><th>评审维度</th><th>你的话术</th></tr></thead><tbody>
+<tr><td>需求理解</td><td>我把问题拆成"数据源 → AI处理 → 人工审核 → 推送"四段闭环。</td></tr>
+<tr><td>AI 使用</td><td>AI 不只是生成文本，还做筛选、价值评分、多源处理。</td></tr>
+<tr><td>产品判断</td><td>用户是增长运营，痛点是从海量信息里快速找到值得做的选题。</td></tr>
+<tr><td>执行能力</td><td>这是真实跑通的，飞书里那条消息就是刚才发的。</td></tr>
+<tr><td>风险控制</td><td>每个 Agent 推送前都有人工审核，且标注信息来源。</td></tr>
+</tbody></table>
+<h2>现场操作速查</h2>
+<div class="card">
+<h3>演示前准备</h3>
+<pre><code>cd ai-agent-demo
+pip install -r requirements.txt
+cp .env.example .env   # 填入真实 key 和 webhook</code></pre>
+<h3>运行命令</h3>
+<pre><code>python problem3_hotspot/main.py
+python problem2_content/main.py</code></pre>
+<div class="warn"><strong>务必提前录屏备份</strong>，防止线上会议中网络或 API 出问题。评审明确指出"方案或概念"会被扣分，必须演示真实运行闭环。</div>
+</div>
+<h2>仓库结构对照</h2>
+<table><thead><tr><th>路径</th><th>说明</th></tr></thead><tbody>
+<tr><td><code>common/</code></td><td>LLM 封装、飞书推送、人工审核（两题复用）</td></tr>
+<tr><td><code>problem3_hotspot/</code></td><td>题三：数据源抓取 + AI 筛选摘要 + 飞书推送</td></tr>
+<tr><td><code>problem2_content/</code></td><td>题二：选题生成 + 内容创作 + 飞书/Word 输出</td></tr>
+<tr><td><code>.env.example</code></td><td>配置模板（不含真实密钥）</td></tr>
+<tr><td><code>.gitignore</code></td><td>忽略 .env 与输出产物，防止密钥泄露</td></tr>
+</tbody></table>
+</div>
+</body>
+</html>
