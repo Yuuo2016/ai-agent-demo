@@ -1,10 +1,4 @@
-# AI Agent 实战题 · 题三 热点发现 Agent
-
-面试实战题实现：**题三 热点发现 Agent**（Hot Topic Discovery Agent）。
-
-> 题二（内容运营 Agent）已独立迁移至仓库 `Yuuo2016/ai-content-agent`。
-
-## 请使用本仓库代码。
+# 题三 热点发现 Agent
 
 ## 功能亮点
 
