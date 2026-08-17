@@ -1,4 +1,10 @@
-# 题三 热点发现 Agent
+# AI Agent 实战题 · 题三 热点发现 Agent
+
+面试实战题实现：**题三 热点发现 Agent**（Hot Topic Discovery Agent）。
+
+> 题二（内容运营 Agent）已独立迁移至仓库 `Yuuo2016/ai-content-agent`。
+
+## 请使用本仓库代码。
 
 ## 功能亮点
 
@@ -69,6 +75,7 @@ python problem3_hotspot/main.py
 | `FEISHU_WEBHOOK` | 飞书自定义机器人 Webhook |
 | `FEISHU_SECRET` | 飞书签名密钥（开启校验才填） |
 | `EMAIL_HOST` / `EMAIL_PORT` / `EMAIL_USER` / `EMAIL_PASS` / `EMAIL_TO` | SMTP 邮件 |
+| `WECOM_WEBHOOK` | 企业微信群机器人 Webhook |
 
 ## 工作流说明
 
