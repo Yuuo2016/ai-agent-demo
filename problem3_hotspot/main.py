@@ -23,9 +23,9 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from common import llm
-from review_items import review_items
-from sources import fetch_all
-from event_cluster import merge_events
+from problem3_hotspot.review_items import review_items
+from problem3_hotspot.sources import fetch_all
+from problem3_hotspot.event_cluster import merge_events
 
 
 def ai_filter_and_summarize(events: list, top_n: int = 5) -> list:
