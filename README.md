@@ -69,7 +69,6 @@ python problem3_hotspot/main.py
 | `FEISHU_WEBHOOK` | 飞书自定义机器人 Webhook |
 | `FEISHU_SECRET` | 飞书签名密钥（开启校验才填） |
 | `EMAIL_HOST` / `EMAIL_PORT` / `EMAIL_USER` / `EMAIL_PASS` / `EMAIL_TO` | SMTP 邮件 |
-| `WECOM_WEBHOOK` | 企业微信群机器人 Webhook |
 
 ## 工作流说明
 
